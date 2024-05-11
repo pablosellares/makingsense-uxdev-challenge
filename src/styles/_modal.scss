@@ -1,0 +1,173 @@
+.modal {
+  background-color: $darkDesaturatedBlue;
+  border-radius: 24px;
+  display: block;
+  height: auto;
+  left: 50%;
+  position: absolute;
+  top: 25%;
+  transform: translate(-50%, -25%);
+  width: 990px;
+  z-index: 999;
+
+  @include tablet {
+    width: 90%;
+  }
+
+  .modal-header {
+    background-color: $darkDesaturatedBlue;
+    border-radius: 24px 24px 0 0;
+    display: flex;
+    height: 30%;
+    justify-content: space-between;
+    padding: 32px;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    .modal-header__left {
+      height: 100%;
+
+      .modal-header__title {
+        color: $white;
+        font-size: $fontXLarge;
+        font-weight: $fontBold;
+        margin-bottom: 32px;
+        text-transform: capitalize;
+      }
+
+      .modal-header__logo-username {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+
+        .modal-header__logo {
+          margin-right: 12px;
+        }
+
+        .modal-header__username {
+          font-size: $fontSmall;
+          font-weight: $fontBold;
+          color: $toggleLight;
+        }
+      }
+
+      .modal-followers__info {
+        display: flex;
+
+        @include tablet {
+          flex-direction: column;
+        }
+
+        .modal-followers__info--qty {
+          font-size: $fontXXXLarge;
+          font-weight: $fontBold;
+          margin-right: 14px;
+        }
+        .modal-followers__info--total,
+        .modal-followers__info--pasttendays,
+        .modal-followers__info--today {
+          display: flex;
+          align-items: center;
+
+          span {
+            margin-right: 64px;
+          }
+        }
+
+        .modal-followers__info--pasttendays,
+        .modal-followers__info--today {
+          .modal-followers__info--qty {
+            &.positive {
+              color: $limeGreen;
+              position: relative;
+              &::before {
+                background: url("/src/assets/icon-up.svg") center center
+                  no-repeat;
+                content: "";
+                height: 16px;
+                left: -16px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 16px;
+              }
+            }
+            &.negative {
+              color: $brightRed;
+              position: relative;
+              &::before {
+                background: url("/src/assets/icon-down.svg") center center
+                  no-repeat;
+                content: "";
+                height: 16px;
+                left: -16px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .modal-header__right {
+      .btn-close {
+        cursor: pointer;
+        display: inline-block;
+        height: 24px;
+        overflow: hidden;
+        position: relative;
+        width: 24px;
+
+        &::before,
+        &::after {
+          background-color: $white;
+          content: "";
+          display: block;
+          height: 100%;
+          margin-top: -2px;
+          width: 2px;
+        }
+
+        &::before {
+          transform: rotate(-45deg);
+          position: absolute;
+          left: 50%;
+        }
+
+        &::after {
+          transform: rotate(45deg);
+          position: absolute;
+          left: 50%;
+        }
+      }
+    }
+  }
+
+  .modal-body {
+    background-color: $veryDarkBlueTopBg;
+    border-radius: 24px;
+    display: block;
+    height: 70%;
+    padding: 32px;
+
+    .modal-body__date {
+      font-weight: $fontRegular;
+      font-size: $fontMedium;
+      margin-bottom: 32px;
+    }
+
+    .recharts-wrapper {
+      background-color: transparent;
+
+      @include tablet {
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+  }
+}

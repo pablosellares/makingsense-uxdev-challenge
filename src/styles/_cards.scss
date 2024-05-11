@@ -1,0 +1,344 @@
+// Main Cards
+
+main {
+  display: flex;
+  flex-direction: column;
+  .dashboard-top {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 45%);
+      align-items: baseline;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 100%);
+    }
+
+    .social-media__card--container {
+      width: 100%;
+
+      @include tablet {
+        width: 100%;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+
+      .social-media__card {
+        background-color: $darkDesaturatedBlue;
+        border-radius: 8px;
+        height: 100%;
+        padding: 32px;
+        position: relative;
+        transition: all 125ms ease-in-out;
+        width: 256px;
+
+        &.lightMode {
+          background-color: $lightGrayishBlue;
+
+          &:hover {
+            background-color: $lightGrayishBlue;
+            filter: brightness(0.9);
+          }
+        }
+
+        @include tablet {
+          width: 100%;
+          margin-bottom: 32px;
+          row-gap: 16px;
+        }
+
+        &:hover {
+          filter: brightness(1.4);
+          cursor: pointer;
+        }
+
+        .card-color-top {
+          border-radius: 4px 4px 0 0;
+          height: 4px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+
+        .card-top {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 32px;
+
+          .card-top_username {
+            margin-left: 10px;
+            font-weight: $fontBold;
+
+            &.lightMode {
+              color: $desaturadedBlue;
+            }
+          }
+        }
+        .card-info {
+          margin-bottom: 24px;
+          .card-info_followers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .card-info_followers-qty {
+              font-size: $fontXXXLarge;
+              font-weight: $fontBold;
+              margin-bottom: 4px;
+
+              &.lightMode {
+                color: $black;
+              }
+            }
+          }
+
+          span {
+            font-size: $fontXSmall;
+            font-weight: $fontRegular;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            &.lightMode {
+              color: $desaturadedBlue;
+            }
+          }
+        }
+        .card-bottom {
+          display: flex;
+          justify-content: center;
+
+          .card-bottom_followers-today {
+            font-size: $fontXSmall;
+            font-weight: $fontBold;
+            position: relative;
+            &.positive {
+              color: $limeGreen;
+              &::before {
+                background: url("/src/assets/icon-up.svg") center center
+                  no-repeat;
+                content: "";
+                height: 8px;
+                left: -12px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+              }
+            }
+
+            &.negative {
+              color: $brightRed;
+              &::before {
+                background: url("/src/assets/icon-down.svg") center center
+                  no-repeat;
+                content: "";
+                height: 8px;
+                left: -12px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Overview Cards
+
+  .overview-title {
+    color: $white;
+    font-size: $fontXLarge;
+    font-weight: $fontBold;
+    margin-bottom: 24px;
+
+    &.lightMode {
+      color: $darkGrayishBlue;
+    }
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  .overview-cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 24px;
+
+    .overview-cards {
+      column-gap: 32px;
+      display: flex;
+      flex: 48%;
+      justify-content: space-between;
+      transition: all 125ms ease-in-out;
+
+      @include tablet {
+        flex-direction: column;
+        justify-content: center;
+        flex: 40%;
+
+        @include mobile {
+          flex: 50%;
+        }
+
+        &:hover {
+          filter: brightness(0.9);
+          cursor: pointer;
+        }
+      }
+
+      .overview-card {
+        background-color: $darkDesaturatedBlue;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 32px 24px;
+        transition: all 125ms ease-in-out;
+        width: 100%;
+
+        &.lightMode {
+          background-color: $lightGrayishBlue;
+
+          &:hover {
+            background-color: $lightGrayishBlue;
+            filter: brightness(0.9);
+
+            @include tablet {
+              filter: brightness(1);
+            }
+          }
+        }
+
+        @include tablet {
+          border-radius: 0;
+
+          &:first-of-type {
+            border-radius: 8px 8px 0 0;
+            padding: 32px 24px 16px 24px;
+          }
+
+          &:last-of-type {
+            border-radius: 0 0 8px 8px;
+            padding: 16px 24px 32px 24px;
+          }
+        }
+
+        &:hover {
+          filter: brightness(1.4);
+          cursor: pointer;
+        }
+
+        .overview-card_top {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 32px;
+
+          @include tablet {
+            margin-bottom: 16px;
+            align-items: center;
+          }
+
+          .overview-card_top--title {
+            font-size: $fontSmall;
+            font-weight: $fontBold;
+            color: $toggleLight;
+
+            &.lightMode {
+              color: $desaturadedBlue;
+            }
+
+            @include tablet {
+              font-size: $fontMedium;
+            }
+          }
+
+          .overview-card_top--logo {
+            @include tablet {
+              width: 32px;
+            }
+          }
+
+          .overview-card_top--logo--likes {
+            @include tablet {
+              display: none;
+            }
+          }
+        }
+
+        .overview-card_bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          .general-qty {
+            font-size: $fontXXLarge;
+            font-weight: $fontBold;
+            color: $white;
+
+            &.lightMode {
+              color: $black;
+            }
+
+            @include tablet {
+              font-size: $fontXXLarge;
+            }
+          }
+
+          .overview-secondPercentage,
+          .overview-firstPercentage {
+            font-size: $fontXSmall;
+            font-weight: $fontBold;
+            position: relative;
+
+            @include tablet {
+              margin-left: 4%;
+            }
+
+            &.positive {
+              color: $limeGreen;
+              &::before {
+                background: url("/src/assets/icon-up.svg") center center
+                  no-repeat;
+                content: "";
+                height: 8px;
+                left: -12px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+              }
+            }
+
+            &.negative {
+              color: $brightRed;
+              &::before {
+                background: url("/src/assets/icon-down.svg") center center
+                  no-repeat;
+                content: "";
+                height: 8px;
+                left: -12px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+body {
+  background-color: $veryDarkBlue;
+  color: $white;
+  transition: all 125ms ease-in-out;
+
+  &.lightMode {
+    background-color: $whiteBg;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 42px 0;
+  width: 1110px;
+
+  @include tablet {
+    padding: 16px;
+    width: 100%;
+  }
+
+  @include mobile {
+    padding: 16px;
+    width: 100%;
+  }
+}
+
+.backdrop {
+  background-color: $black;
+  display: block;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+  opacity: 0.7;
+
+  & ~ body {
+    overflow: hidden;
+  }
+}
+
+.top-bg {
+  background-color: $veryDarkBlueTopBg;
+  border-radius: 0 0 12px 12px;
+  height: 243px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  &.lightMode {
+    background-color: $veryPaleBlue;
+  }
+}
