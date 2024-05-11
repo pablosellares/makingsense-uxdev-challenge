@@ -1,5 +1,12 @@
 # UX Developer Challenge - Social media dashboard with theme switcher
 
+## Setup
+
+This project is made with Vite.
+
+`npm install` to install dependencies
+`npm run dev` to start the project
+
 ## The challenge
 
 The client has requested you to build out this Social Media Dashboard and get it looking as close to the design as possible, keeping in mind simplicity and ease-of-use.
