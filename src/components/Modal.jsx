@@ -29,7 +29,7 @@ const Modal = ({ onClick, modalData }) => {
               <div className="modal-header__logo-username">
                 <img
                   className="modal-header__logo"
-                  src={`assets/${modalData.icono}.svg`}
+                  src={`src/assets/${modalData.icono}.svg`}
                   alt=""
                 />
                 <div
