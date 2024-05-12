@@ -1,16 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Data from "./Data";
 
 const OverviewCard = () => {
   const [overviewData, setOverviewData] = useState(Data);
 
-  // useEffect(() => {
-  //   fetch("/data/data.json")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setOverviewData(data);
-  //     });
-  // }, []);
   return (
     <>
       <h1 className="overview-title theme">Overview - Today</h1>
