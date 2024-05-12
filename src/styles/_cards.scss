@@ -184,19 +184,20 @@ main {
       justify-content: space-between;
       transition: all 125ms ease-in-out;
 
+      &.lightMode {
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+
       @include tablet {
         flex-direction: column;
         justify-content: center;
         flex: 40%;
+      }
 
-        @include mobile {
-          flex: 50%;
-        }
-
-        &:hover {
-          filter: brightness(0.9);
-          cursor: pointer;
-        }
+      @include mobile {
+        flex: 50%;
       }
 
       .overview-card {
@@ -213,17 +214,23 @@ main {
           background-color: $lightGrayishBlue;
 
           &:hover {
-            background-color: $lightGrayishBlue;
-            filter: brightness(0.9);
-
-            @include tablet {
-              filter: brightness(1);
-            }
+            //background-color: $lightGrayishBlue;
+            filter: brightness(1);
           }
+        }
+
+        &:hover {
+          filter: brightness(1.4);
+          cursor: pointer;
         }
 
         @include tablet {
           border-radius: 0;
+
+          &:hover {
+            filter: brightness(1);
+            cursor: pointer;
+          }
 
           &:first-of-type {
             border-radius: 8px 8px 0 0;
@@ -234,11 +241,6 @@ main {
             border-radius: 0 0 8px 8px;
             padding: 16px 24px 32px 24px;
           }
-        }
-
-        &:hover {
-          filter: brightness(1.4);
-          cursor: pointer;
         }
 
         .overview-card_top {

@@ -4,7 +4,14 @@ header {
   justify-content: space-between;
   margin-bottom: 50px;
 
+  @include tablet {
+    align-items: flex-start;
+  }
+
   .header-left {
+    @include tablet {
+      width: 50%;
+    }
     .title {
       color: $white;
       font-size: $fontXLarge;
@@ -30,6 +37,11 @@ header {
     .lightModeToggle {
       align-items: center;
       display: flex;
+
+      @include tablet {
+        flex-direction: column;
+      }
+
       span {
         font-weight: $fontBold;
         font-size: $fontSmall;
@@ -37,19 +49,32 @@ header {
         &.lightMode {
           color: $darkGrayishBlue;
         }
+
+        @include tablet {
+          font-size: $fontXSmall;
+          margin-bottom: 8px;
+        }
       }
       .lightModeToggle-switch {
         background: $themeToggleBg;
         border-radius: 24px;
+        cursor: pointer;
         height: 24px;
         margin-left: 14px;
         position: relative;
         width: 48px;
 
+        @include tablet {
+          margin-left: 0;
+        }
+
+        &.lightMode {
+          background: $toggleLight;
+        }
+
         .switch-circle {
           background-color: $black;
           border-radius: 100%;
-          cursor: pointer;
           height: 18px;
           width: 18px;
           margin-top: 3px;

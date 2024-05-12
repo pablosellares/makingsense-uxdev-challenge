@@ -1,23 +1,29 @@
+import { useRef, useState } from "react";
 import Data from "./components/Data";
-import MainCard from "./components/MainCard";
 import Header from "./components/Header";
+import MainCard from "./components/MainCard";
+import Modal from "./components/Modal";
+import OverviewCard from "./components/OverviewCard";
 
 import "./styles/main.scss";
-import OverviewCard from "./components/OverviewCard";
-import Modal from "./components/Modal";
-import { useState } from "react";
 
 function App() {
+  const containerRef = useRef(null);
   const [isModalActive, setIsModalActive] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(false);
   const [modalData, setModalData] = useState([]);
 
   function handleClick(data) {
     if (!isModalActive) {
       setIsModalActive(true);
       setModalData(data);
+      document.body.classList.add("overflow");
+      containerRef.current.classList.add("overflow");
     } else {
       setIsModalActive(false);
       setModalData({});
+      document.body.classList.remove("overflow");
+      containerRef.current.classList.remove("overflow");
     }
   }
 
@@ -28,7 +34,7 @@ function App() {
       ) : (
         ""
       )}
-      <div className="container">
+      <div ref={containerRef} className="container">
         <div className="top-bg theme"></div>
         <Header />
         <main>

@@ -79,11 +79,10 @@ const Chart = () => {
         <XAxis dataKey="name" padding={{ left: 30, right: 30 }} />
         <YAxis />
         <Tooltip />
-        <Legend />
         <Line
           type="monotone"
           dataKey="followersLast10days"
-          stroke="#8884d8"
+          stroke="hsl(243, 51%, 70%)"
           activeDot={{ r: 8 }}
         />
         <Line type="monotone" dataKey="newFollowers" stroke="#82ca9d" />

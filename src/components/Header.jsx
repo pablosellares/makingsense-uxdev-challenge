@@ -1,14 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 
+// const lightMode = localStorage.getItem("lightMode");
+
 export default function Header() {
   const myRef = useRef([]);
-
-  const darkMode = localStorage.getItem("darkMode");
   const [isToggled, setIsToggled] = useState(false);
 
   useEffect(() => {
     myRef.current = Array.from(document.querySelectorAll(".theme"));
-    console.log(myRef.current);
   }, []);
 
   const enableLightMode = () => {
@@ -27,9 +26,9 @@ export default function Header() {
     localStorage.setItem("lightMode", null);
   };
 
-  if (darkMode === "enabled") {
-    enableLightMode();
-  }
+  // if (lightMode != null) {
+  //   enableLightMode();
+  // }
 
   const handleClick = () => {
     if (!isToggled) {
@@ -53,9 +52,8 @@ export default function Header() {
             <span className="theme">
               {isToggled ? "Light Mode" : "Dark Mode"}
             </span>
-            <div className="lightModeToggle-switch">
+            <div className="lightModeToggle-switch theme" onClick={handleClick}>
               <div
-                onClick={handleClick}
                 className={
                   isToggled ? "switch-circle toggled" : "switch-circle "
                 }

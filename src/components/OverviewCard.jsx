@@ -16,7 +16,7 @@ const OverviewCard = () => {
       <h1 className="overview-title theme">Overview - Today</h1>
       <ul className="overview-cards_container">
         {overviewData.map((item) => (
-          <li key={item.id} className="overview-cards">
+          <li key={item.id} className="overview-cards theme">
             <div className="overview-card theme">
               <div className="overview-card_top">
                 <span className="overview-card_top--title theme">
