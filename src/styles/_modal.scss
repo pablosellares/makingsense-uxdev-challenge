@@ -211,6 +211,10 @@
       font-weight: $fontRegular;
       font-size: $fontMedium;
       margin-bottom: 32px;
+
+      &.lightMode {
+        color: $darkGrayishBlue;
+      }
     }
 
     .recharts-wrapper {
