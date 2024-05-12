@@ -73,6 +73,10 @@ main {
           justify-content: center;
           margin-bottom: 32px;
 
+          @include tablet {
+            margin-bottom: 24px;
+          }
+
           .card-top_username {
             margin-left: 10px;
             font-weight: $fontBold;
@@ -84,6 +88,11 @@ main {
         }
         .card-info {
           margin-bottom: 24px;
+
+          @include tablet {
+            margin-bottom: 32px;
+          }
+
           .card-info_followers {
             display: flex;
             flex-direction: column;
@@ -119,6 +128,11 @@ main {
             font-size: $fontXSmall;
             font-weight: $fontBold;
             position: relative;
+
+            @include tablet {
+              font-size: $fontSmall;
+            }
+
             &.positive {
               color: $limeGreen;
               &::before {
@@ -319,6 +333,7 @@ main {
 
             @include tablet {
               margin-left: 4%;
+              font-size: $fontSmall;
             }
 
             &.positive {
