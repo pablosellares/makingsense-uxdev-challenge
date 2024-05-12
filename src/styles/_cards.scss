@@ -184,13 +184,11 @@ main {
       justify-content: space-between;
       transition: all 125ms ease-in-out;
 
-      &:hover {
-        filter: brightness(1.4);
-      }
-
       &.lightMode {
-        &:hover {
-          filter: brightness(0.9);
+        @include tablet {
+          &:hover {
+            filter: brightness(0.9);
+          }
         }
       }
 
@@ -216,10 +214,16 @@ main {
 
         &.lightMode {
           background-color: $lightGrayishBlue;
-
           &:hover {
-            //background-color: $lightGrayishBlue;
-            filter: brightness(1);
+            filter: brightness(0.9);
+            cursor: pointer;
+          }
+
+          @include tablet {
+            &:hover {
+              //background-color: $lightGrayishBlue;
+              filter: brightness(1);
+            }
           }
         }
 
@@ -230,11 +234,6 @@ main {
 
         @include tablet {
           border-radius: 0;
-
-          &:hover {
-            filter: brightness(1);
-            cursor: pointer;
-          }
 
           &:first-of-type {
             border-radius: 8px 8px 0 0;
