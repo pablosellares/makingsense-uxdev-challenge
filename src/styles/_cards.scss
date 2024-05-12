@@ -184,6 +184,10 @@ main {
       justify-content: space-between;
       transition: all 125ms ease-in-out;
 
+      &:hover {
+        filter: brightness(1.4);
+      }
+
       &.lightMode {
         &:hover {
           filter: brightness(0.9);
