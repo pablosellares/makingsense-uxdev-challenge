@@ -7,6 +7,8 @@ const Modal = ({ onClick, modalData }) => {
     const storedMode = localStorage.getItem("lightMode");
     if (storedMode === "enabled") {
       setLightMode(storedMode);
+    } else {
+      setLightMode(null);
     }
   }, []);
   return (
@@ -27,7 +29,7 @@ const Modal = ({ onClick, modalData }) => {
               <div className="modal-header__logo-username">
                 <img
                   className="modal-header__logo"
-                  src={`src/assets/${modalData.icono}.svg`}
+                  src={`assets/${modalData.icono}.svg`}
                   alt=""
                 />
                 <div

@@ -196,6 +196,10 @@ main {
         flex-direction: column;
         justify-content: center;
         flex: 40%;
+        &:hover {
+          filter: brightness(1.4);
+          cursor: pointer;
+        }
       }
 
       @include mobile {
@@ -243,6 +247,11 @@ main {
           &:last-of-type {
             border-radius: 0 0 8px 8px;
             padding: 16px 24px 32px 24px;
+          }
+
+          &:hover {
+            filter: brightness(1);
+            cursor: pointer;
           }
         }
 
