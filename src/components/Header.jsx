@@ -1,7 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 
-// const lightMode = localStorage.getItem("lightMode");
-
 export default function Header() {
   const myRef = useRef([]);
   const [isToggled, setIsToggled] = useState(false);
@@ -25,10 +23,6 @@ export default function Header() {
     document.body.classList.remove("lightMode");
     localStorage.setItem("lightMode", null);
   };
-
-  // if (lightMode != null) {
-  //   enableLightMode();
-  // }
 
   const handleClick = () => {
     if (!isToggled) {
