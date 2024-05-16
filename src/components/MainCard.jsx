@@ -6,7 +6,7 @@ const Card = ({ cardData, onClick }) => {
         onClick={() => onClick(cardData)}
       >
         <div
-          className="social-media__card theme"
+          className="social-media__card"
           onClick={onClick}
           key={cardData.id}
           id={cardData.web}
@@ -21,14 +21,14 @@ const Card = ({ cardData, onClick }) => {
               src={`/src/assets/${cardData.icono}.svg`}
               alt=""
             />
-            <p className="card-top_username theme">{cardData.username}</p>
+            <p className="card-top_username">{cardData.username}</p>
           </div>
           <div className="card-info">
             <div className="card-info_followers">
-              <div className="card-info_followers-qty theme">
+              <div className="card-info_followers-qty">
                 {cardData.followers || cardData.subscribers}
               </div>
-              <span className="theme">{cardData.typeOfPublic}</span>
+              <span>{cardData.typeOfPublic}</span>
             </div>
           </div>
           <div className="card-bottom">

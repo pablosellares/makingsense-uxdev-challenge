@@ -17,19 +17,11 @@ header {
       font-size: $fontXLarge;
       font-weight: $fontBold;
       margin-bottom: 14px;
-
-      &.lightMode {
-        color: $black;
-      }
     }
     .subtitle {
       font-size: $fontSmall;
       font-weight: $fontBold;
       color: $toggleLight;
-
-      &.lightMode {
-        color: $darkGrayishBlue;
-      }
     }
   }
 
@@ -45,10 +37,6 @@ header {
       span {
         font-weight: $fontBold;
         font-size: $fontSmall;
-
-        &.lightMode {
-          color: $darkGrayishBlue;
-        }
 
         @include tablet {
           font-size: $fontXSmall;
@@ -66,10 +54,6 @@ header {
 
         @include tablet {
           margin-left: 0;
-        }
-
-        &.lightMode {
-          background: $toggleLight;
         }
 
         .switch-circle {

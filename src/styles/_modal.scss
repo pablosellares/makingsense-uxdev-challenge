@@ -8,11 +8,6 @@
   width: 100vw;
   z-index: 999;
   opacity: 0.7;
-
-  &.lightMode {
-    background-color: $black;
-    opacity: 0.6;
-  }
 }
 
 .modal {
@@ -28,10 +23,6 @@
   z-index: 999;
   filter: drop-shadow(0 0 18px rgba(0, 0, 0, 0.2));
 
-  &.lightMode {
-    background-color: $whiteBg;
-  }
-
   @include tablet {
     width: 90%;
   }
@@ -43,10 +34,6 @@
     height: 30%;
     justify-content: space-between;
     padding: 32px;
-
-    &.lightMode {
-      background-color: $veryPaleBlue;
-    }
 
     @include tablet {
       width: 100%;
@@ -61,10 +48,6 @@
         font-weight: $fontBold;
         margin-bottom: 32px;
         text-transform: capitalize;
-
-        &.lightMode {
-          color: $veryDarkBlue;
-        }
       }
 
       .modal-header__logo-username {
@@ -80,10 +63,6 @@
           font-size: $fontSmall;
           font-weight: $fontBold;
           color: $toggleLight;
-
-          &.lightMode {
-            color: $desaturadedBlue;
-          }
         }
       }
 
@@ -98,10 +77,6 @@
           font-size: $fontXXXLarge;
           font-weight: $fontBold;
           margin-right: 14px;
-
-          &.lightMode {
-            color: $darkGrayishBlue;
-          }
         }
         .modal-followers__info--total,
         .modal-followers__info--pasttendays,
@@ -111,9 +86,6 @@
 
           span {
             margin-right: 64px;
-            &.lightMode {
-              color: $darkGrayishBlue;
-            }
           }
         }
 
@@ -164,13 +136,6 @@
         position: relative;
         width: 24px;
 
-        &.lightMode {
-          &::before,
-          &::after {
-            background-color: $darkGrayishBlue;
-          }
-        }
-
         &::before,
         &::after {
           background-color: $white;
@@ -203,18 +168,10 @@
     height: 70%;
     padding: 32px;
 
-    &.lightMode {
-      background-color: $whiteBg;
-    }
-
     .modal-body__date {
       font-weight: $fontRegular;
       font-size: $fontMedium;
       margin-bottom: 32px;
-
-      &.lightMode {
-        color: $darkGrayishBlue;
-      }
     }
 
     .recharts-wrapper {

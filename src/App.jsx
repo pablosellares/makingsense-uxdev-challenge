@@ -10,7 +10,6 @@ import "./styles/main.scss";
 function App() {
   const containerRef = useRef(null);
   const [isModalActive, setIsModalActive] = useState(false);
-  const [isLightMode, setIsLightMode] = useState(false);
   const [modalData, setModalData] = useState([]);
 
   function handleClick(data) {
@@ -35,7 +34,7 @@ function App() {
         ""
       )}
       <div ref={containerRef} className="container">
-        <div className="top-bg theme"></div>
+        <div className="top-bg"></div>
         <Header />
         <main>
           <div className="dashboard-top">

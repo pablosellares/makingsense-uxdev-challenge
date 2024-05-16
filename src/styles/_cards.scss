@@ -38,15 +38,6 @@ main {
         transition: all 125ms ease-in-out;
         width: 256px;
 
-        &.lightMode {
-          background-color: $lightGrayishBlue;
-
-          &:hover {
-            background-color: $lightGrayishBlue;
-            filter: brightness(0.9);
-          }
-        }
-
         @include tablet {
           width: 100%;
           margin-bottom: 32px;
@@ -80,10 +71,6 @@ main {
           .card-top_username {
             margin-left: 10px;
             font-weight: $fontBold;
-
-            &.lightMode {
-              color: $desaturadedBlue;
-            }
           }
         }
         .card-info {
@@ -102,10 +89,6 @@ main {
               font-size: $fontXXXLarge;
               font-weight: $fontBold;
               margin-bottom: 4px;
-
-              &.lightMode {
-                color: $black;
-              }
             }
           }
 
@@ -114,10 +97,6 @@ main {
             font-weight: $fontRegular;
             letter-spacing: 4px;
             text-transform: uppercase;
-
-            &.lightMode {
-              color: $desaturadedBlue;
-            }
           }
         }
         .card-bottom {
@@ -176,10 +155,6 @@ main {
     font-weight: $fontBold;
     margin-bottom: 24px;
 
-    &.lightMode {
-      color: $darkGrayishBlue;
-    }
-
     @include tablet {
       margin-bottom: 32px;
     }
@@ -197,14 +172,6 @@ main {
       flex: 48%;
       justify-content: space-between;
       transition: all 125ms ease-in-out;
-
-      &.lightMode {
-        @include tablet {
-          &:hover {
-            filter: brightness(0.9);
-          }
-        }
-      }
 
       @include tablet {
         flex-direction: column;
@@ -229,21 +196,6 @@ main {
         padding: 32px 24px;
         transition: all 125ms ease-in-out;
         width: 100%;
-
-        &.lightMode {
-          background-color: $lightGrayishBlue;
-          &:hover {
-            filter: brightness(0.9);
-            cursor: pointer;
-          }
-
-          @include tablet {
-            &:hover {
-              //background-color: $lightGrayishBlue;
-              filter: brightness(1);
-            }
-          }
-        }
 
         &:hover {
           filter: brightness(1.4);
@@ -284,10 +236,6 @@ main {
             font-weight: $fontBold;
             color: $toggleLight;
 
-            &.lightMode {
-              color: $desaturadedBlue;
-            }
-
             @include tablet {
               font-size: $fontMedium;
             }
@@ -315,10 +263,6 @@ main {
             font-size: $fontXXLarge;
             font-weight: $fontBold;
             color: $white;
-
-            &.lightMode {
-              color: $black;
-            }
 
             @include tablet {
               font-size: $fontXXLarge;

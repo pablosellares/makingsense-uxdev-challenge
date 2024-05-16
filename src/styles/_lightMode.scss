@@ -1,0 +1,138 @@
+body {
+  &.lightMode {
+    background-color: $whiteBg;
+
+    .top-bg {
+      background-color: $veryPaleBlue;
+    }
+
+    header {
+      .header-left {
+        .title {
+          color: $black;
+        }
+        .subtitle {
+          color: $darkGrayishBlue;
+        }
+      }
+      .header-right {
+        span {
+          color: $darkGrayishBlue;
+        }
+        .lightModeToggle-switch {
+          background: $toggleLight;
+        }
+      }
+    }
+    main {
+      .dashboard-top {
+        .social-media__card--container {
+          .social-media__card {
+            background-color: $lightGrayishBlue;
+
+            &:hover {
+              background-color: $lightGrayishBlue;
+              filter: brightness(0.9);
+            }
+            .card-top {
+              .card-top_username {
+                color: $desaturadedBlue;
+              }
+            }
+            .card-info {
+              .card-info_followers {
+                .card-info_followers-qty {
+                  color: $black;
+                }
+                span {
+                  color: $desaturadedBlue;
+                }
+              }
+            }
+          }
+        }
+      }
+      .overview-title {
+        color: $darkGrayishBlue;
+      }
+      .overview-cards_container {
+        .overview-cards {
+          @include tablet {
+            &:hover {
+              filter: brightness(0.9);
+            }
+          }
+          .overview-card {
+            background-color: $lightGrayishBlue;
+            &:hover {
+              filter: brightness(0.9);
+              cursor: pointer;
+            }
+
+            @include tablet {
+              &:hover {
+                filter: brightness(1);
+              }
+            }
+            .overview-card_top {
+              .overview-card_top--title {
+                color: $desaturadedBlue;
+              }
+            }
+            .overview-card_bottom {
+              .general-qty {
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+    .backdrop {
+      background-color: $black;
+      opacity: 0.6;
+    }
+    .modal {
+      background-color: $whiteBg;
+      .modal-header {
+        background-color: $veryPaleBlue;
+        .modal-header__left {
+          .modal-header__title {
+            color: $veryDarkBlue;
+          }
+          .modal-header__logo-username {
+            .modal-header__username {
+              color: $desaturadedBlue;
+            }
+          }
+          .modal-followers__info {
+            .modal-followers__info--qty {
+              color: $darkGrayishBlue;
+            }
+            .modal-followers__info--total,
+            .modal-followers__info--pasttendays,
+            .modal-followers__info--today {
+              span {
+                color: $darkGrayishBlue;
+              }
+            }
+          }
+        }
+        .modal-header__right {
+          .btn-close {
+            &::before,
+            &::after {
+              background-color: $darkGrayishBlue;
+            }
+          }
+        }
+      }
+      .modal-body {
+        background-color: $whiteBg;
+        .modal-body__date {
+          color: $darkGrayishBlue;
+        }
+      }
+    }
+  }
+}
