@@ -18,7 +18,7 @@ export default function Header() {
       <header>
         <div className="header-left">
           <h1 className="title">Social Media Dashboard</h1>
-          <h2 className="subtitles">Total Followers: 23,004</h2>
+          <h2 className="subtitle">Total Followers: 23,004</h2>
         </div>
         <div className="header-right">
           <div className="lightModeToggle">

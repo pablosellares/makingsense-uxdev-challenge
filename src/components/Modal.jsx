@@ -1,16 +1,6 @@
-import { useEffect, useState } from "react";
 import Chart from "./Chart";
 
 const Modal = ({ onClick, modalData }) => {
-  const [lightMode, setLightMode] = useState(false);
-  useEffect(() => {
-    const storedMode = localStorage.getItem("lightMode");
-    if (storedMode === "enabled") {
-      setLightMode(storedMode);
-    } else {
-      setLightMode(null);
-    }
-  }, []);
   return (
     <>
       <div className="backdrop" onClick={onClick}></div>
