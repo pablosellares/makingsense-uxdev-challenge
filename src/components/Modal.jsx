@@ -1,4 +1,5 @@
 import Chart from "./Chart";
+import { getImagesURL } from "../utils/getImages";
 
 const Modal = ({ onClick, modalData }) => {
   return (
@@ -12,7 +13,7 @@ const Modal = ({ onClick, modalData }) => {
               <div className="modal-header__logo-username">
                 <img
                   className="modal-header__logo"
-                  src={`src/assets/${modalData.icono}.svg`}
+                  src={getImagesURL(modalData.icono)}
                   alt=""
                 />
                 <div className="modal-header__username">{`${modalData.username}`}</div>

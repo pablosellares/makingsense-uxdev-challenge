@@ -1,18 +1,19 @@
 import { useState } from "react";
 import Data from "./Data";
+import { getImagesURL } from "../utils/getImages";
 
 const OverviewCard = () => {
   const [overviewData, setOverviewData] = useState(Data);
 
   return (
     <>
-      <h1 className="overview-title theme">Overview - Today</h1>
+      <h1 className="overview-title">Overview - Today</h1>
       <ul className="overview-cards_container">
         {overviewData.map((item) => (
-          <li key={item.id} className="overview-cards theme">
-            <div className="overview-card theme">
+          <li key={item.id} className="overview-cards">
+            <div className="overview-card">
               <div className="overview-card_top">
-                <span className="overview-card_top--title theme">
+                <span className="overview-card_top--title">
                   {item.overviewToday.pageViews ||
                     item.overviewToday.retweets ||
                     item.overviewToday.profileViews ||
@@ -20,12 +21,12 @@ const OverviewCard = () => {
                 </span>
                 <img
                   className="overview-card_top--logo"
-                  src={`/src/assets/${item.icono}.svg`}
+                  src={getImagesURL(item.icono)}
                   alt={item.web}
                 />
               </div>
               <div className="overview-card_bottom">
-                <span className="general-qty theme">
+                <span className="general-qty">
                   {item.overviewToday.viewsQty ||
                     item.overviewToday.retweetsQty}
                 </span>
@@ -36,19 +37,19 @@ const OverviewCard = () => {
                 </span>
               </div>
             </div>
-            <div className="overview-card theme">
+            <div className="overview-card">
               <div className="overview-card_top">
-                <span className="overview-card_top--title theme">
+                <span className="overview-card_top--title">
                   {item.overviewToday.likes}
                 </span>
                 <img
                   className="overview-card_top--logo--likes"
-                  src={`/src/assets/${item.icono}.svg`}
+                  src={getImagesURL(item.icono)}
                   alt={item.web}
                 />
               </div>
               <div className="overview-card_bottom">
-                <span className="general-qty theme">
+                <span className="general-qty">
                   {item.overviewToday.likesQty}
                 </span>
                 <span

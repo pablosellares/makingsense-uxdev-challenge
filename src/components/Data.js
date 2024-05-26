@@ -1,7 +1,7 @@
 const Data = [
   {
     "id": 1,
-    "icono": "icon-facebook",
+    "icono": "icon-facebook.svg",
     "web": "facebook",
     "username": "@nathanf",
     "followers": 1987,
@@ -24,7 +24,7 @@ const Data = [
   },
   {
     "id": 2,
-    "icono": "icon-twitter",
+    "icono": "icon-twitter.svg",
     "web": "twitter",
     "username": "@nathanf",
     "followers": 1044,
@@ -47,7 +47,7 @@ const Data = [
   },
   {
     "id": 3,
-    "icono": "icon-instagram",
+    "icono": "icon-instagram.svg",
     "web": "instagram",
     "username": "@realnathanf",
     "followers": "11k",
@@ -70,7 +70,7 @@ const Data = [
   },
   {
     "id": 4,
-    "icono": "icon-youtube",
+    "icono": "icon-youtube.svg",
     "web": "youTube",
     "username": "Nathan F.",
     "subscribers": 8239,

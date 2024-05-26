@@ -1,3 +1,5 @@
+import { getImagesURL } from "../utils/getImages";
+
 const Card = ({ cardData, onClick }) => {
   return (
     <>
@@ -18,7 +20,7 @@ const Card = ({ cardData, onClick }) => {
           <div className="card-top">
             <img
               className="card-top_logo"
-              src={`/src/assets/${cardData.icono}.svg`}
+              src={getImagesURL(cardData.icono)}
               alt=""
             />
             <p className="card-top_username">{cardData.username}</p>
